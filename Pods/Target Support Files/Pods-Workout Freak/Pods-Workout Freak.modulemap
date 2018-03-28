@@ -1,0 +1,6 @@
+framework module Pods_Workout_Freak {
+  umbrella header "Pods-Workout Freak-umbrella.h"
+
+  export *
+  module * { export * }
+}
