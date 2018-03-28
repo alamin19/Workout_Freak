@@ -116,27 +116,19 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         //let post = posts.reversed()[indexPath.row] // reverse the tableView elements
         let post = posts[indexPath.row]
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
-            
-            let tap = UITapGestureRecognizer(target: self, action: #selector(self.btnCellClicked(_:)))
-            
-            cell.addGestureRecognizer(tap)
-            self.selectedCell = indexPath.row
-            
-            if let image = FeedViewController.imageCache.object(forKey: post.imageUrl as NSString) {
-                cell.configureCell(post: post, image: image)
-            } else {
-                cell.configureCell(post: post)
-            }
-            return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
+        
+        if let image = FeedViewController.imageCache.object(forKey: post.imageUrl as NSString) {
+            cell.configureCell(post: post, image: image)
         } else {
-            self.selectedCell = indexPath.row
-            return PostCell()
+            cell.configureCell(post: post)
         }
+        return cell
+    
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        selectedCell = indexPath.row
         self.performSegue(withIdentifier: "FeedDetail", sender: self)
     }
     
