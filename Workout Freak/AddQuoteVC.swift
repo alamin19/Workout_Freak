@@ -1,9 +1,9 @@
 //
 //  AddQuoteVC.swift
-//  itjapan-social
+//  Workout Freak
 //
 //  Created by Sikander Zeb on 1/4/18.
-//  Copyright © 2018 MatthiasHofmann. All rights reserved.
+//  Copyright © 2018 Amin. All rights reserved.
 //
 
 import UIKit

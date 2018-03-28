@@ -29,6 +29,20 @@
 		278D6E1B206AA63800A68BDC /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 278D6E19206AA63800A68BDC /* Fabric.framework */; };
 		278D6E1C206AA63800A68BDC /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 278D6E1A206AA63800A68BDC /* Crashlytics.framework */; };
 		278D6E22206AAEC700A68BDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 278D6E21206AAEC600A68BDC /* GoogleService-Info.plist */; };
+		278D6E24206B35F400A68BDC /* FeedDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278D6E23206B35F400A68BDC /* FeedDetailVC.swift */; };
+		278D6E2D206B41ED00A68BDC /* MHFacebookImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 278D6E27206B41EC00A68BDC /* MHFacebookImageViewer.m */; };
+		278D6E2E206B41ED00A68BDC /* Done.png in Resources */ = {isa = PBXBuildFile; fileRef = 278D6E29206B41EC00A68BDC /* Done.png */; };
+		278D6E2F206B41ED00A68BDC /* Done@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 278D6E2A206B41EC00A68BDC /* Done@2x.png */; };
+		278D6E30206B41ED00A68BDC /* UIImageView+MHFacebookImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 278D6E2C206B41EC00A68BDC /* UIImageView+MHFacebookImageViewer.m */; };
+		278D6E46206B456000A68BDC /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 278D6E34206B456000A68BDC /* AFHTTPClient.m */; };
+		278D6E47206B456000A68BDC /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 278D6E36206B456000A68BDC /* AFHTTPRequestOperation.m */; };
+		278D6E48206B456000A68BDC /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 278D6E38206B456000A68BDC /* AFImageRequestOperation.m */; };
+		278D6E49206B456000A68BDC /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 278D6E3A206B456000A68BDC /* AFJSONRequestOperation.m */; };
+		278D6E4A206B456000A68BDC /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 278D6E3C206B456000A68BDC /* AFNetworkActivityIndicatorManager.m */; };
+		278D6E4B206B456000A68BDC /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 278D6E3F206B456000A68BDC /* AFPropertyListRequestOperation.m */; };
+		278D6E4C206B456000A68BDC /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 278D6E41206B456000A68BDC /* AFURLConnectionOperation.m */; };
+		278D6E4D206B456000A68BDC /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 278D6E43206B456000A68BDC /* AFXMLRequestOperation.m */; };
+		278D6E4E206B456000A68BDC /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 278D6E45206B456000A68BDC /* UIImageView+AFNetworking.m */; };
 		B82416AC6D2DF0041BC2316C /* Pods_Workout_Freak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E007675FCA686C79DE821F0 /* Pods_Workout_Freak.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +71,33 @@
 		278D6E19206AA63800A68BDC /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		278D6E1A206AA63800A68BDC /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		278D6E21206AAEC600A68BDC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		278D6E23206B35F400A68BDC /* FeedDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailVC.swift; sourceTree = "<group>"; };
+		278D6E26206B41EC00A68BDC /* MHFacebookImageViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHFacebookImageViewer.h; sourceTree = "<group>"; };
+		278D6E27206B41EC00A68BDC /* MHFacebookImageViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHFacebookImageViewer.m; sourceTree = "<group>"; };
+		278D6E29206B41EC00A68BDC /* Done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Done.png; sourceTree = "<group>"; };
+		278D6E2A206B41EC00A68BDC /* Done@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Done@2x.png"; sourceTree = "<group>"; };
+		278D6E2B206B41EC00A68BDC /* UIImageView+MHFacebookImageViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MHFacebookImageViewer.h"; sourceTree = "<group>"; };
+		278D6E2C206B41EC00A68BDC /* UIImageView+MHFacebookImageViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MHFacebookImageViewer.m"; sourceTree = "<group>"; };
+		278D6E31206B429800A68BDC /* Workout_Freak_Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Workout_Freak_Bridging_Header.h; sourceTree = "<group>"; };
+		278D6E33206B456000A68BDC /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		278D6E34206B456000A68BDC /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		278D6E35206B456000A68BDC /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		278D6E36206B456000A68BDC /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		278D6E37206B456000A68BDC /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		278D6E38206B456000A68BDC /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		278D6E39206B456000A68BDC /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		278D6E3A206B456000A68BDC /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		278D6E3B206B456000A68BDC /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		278D6E3C206B456000A68BDC /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		278D6E3D206B456000A68BDC /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		278D6E3E206B456000A68BDC /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		278D6E3F206B456000A68BDC /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		278D6E40206B456000A68BDC /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		278D6E41206B456000A68BDC /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		278D6E42206B456000A68BDC /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		278D6E43206B456000A68BDC /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		278D6E44206B456000A68BDC /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		278D6E45206B456000A68BDC /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		28F9B5BD4573BB839F60D0FD /* Pods-Workout Freak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workout Freak.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Workout Freak/Pods-Workout Freak.debug.xcconfig"; sourceTree = "<group>"; };
 		6E007675FCA686C79DE821F0 /* Pods_Workout_Freak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Workout_Freak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9E84A4683D5B66D43DC9E1 /* Pods-Workout Freak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workout Freak.release.xcconfig"; path = "Pods/Target Support Files/Pods-Workout Freak/Pods-Workout Freak.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +120,7 @@
 		278D6DDD206AA2B100A68BDC = {
 			isa = PBXGroup;
 			children = (
+				278D6E31206B429800A68BDC /* Workout_Freak_Bridging_Header.h */,
 				278D6DE8206AA2B100A68BDC /* Workout Freak */,
 				278D6DE7206AA2B100A68BDC /* Products */,
 				393805393FEA9E7D678B0521 /* Pods */,
@@ -113,6 +155,8 @@
 				278D6DFF206AA4A100A68BDC /* RoundButton.swift */,
 				278D6DEB206AA2B100A68BDC /* ViewController.swift */,
 				278D6DED206AA2B100A68BDC /* Main.storyboard */,
+				278D6E23206B35F400A68BDC /* FeedDetailVC.swift */,
+				278D6E25206B41EC00A68BDC /* MHFBImageViewController */,
 				278D6DF3206AA2B100A68BDC /* Assets.xcassets */,
 				278D6DF5206AA2B100A68BDC /* LaunchScreen.storyboard */,
 				278D6DF8206AA2B100A68BDC /* Info.plist */,
@@ -120,6 +164,54 @@
 				278D6DF0206AA2B100A68BDC /* Workout_Freak.xcdatamodeld */,
 			);
 			path = "Workout Freak";
+			sourceTree = "<group>";
+		};
+		278D6E25206B41EC00A68BDC /* MHFBImageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				278D6E32206B456000A68BDC /* AFNetworking */,
+				278D6E26206B41EC00A68BDC /* MHFacebookImageViewer.h */,
+				278D6E27206B41EC00A68BDC /* MHFacebookImageViewer.m */,
+				278D6E28206B41EC00A68BDC /* Resources */,
+				278D6E2B206B41EC00A68BDC /* UIImageView+MHFacebookImageViewer.h */,
+				278D6E2C206B41EC00A68BDC /* UIImageView+MHFacebookImageViewer.m */,
+			);
+			path = MHFBImageViewController;
+			sourceTree = "<group>";
+		};
+		278D6E28206B41EC00A68BDC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				278D6E29206B41EC00A68BDC /* Done.png */,
+				278D6E2A206B41EC00A68BDC /* Done@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		278D6E32206B456000A68BDC /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				278D6E33206B456000A68BDC /* AFHTTPClient.h */,
+				278D6E34206B456000A68BDC /* AFHTTPClient.m */,
+				278D6E35206B456000A68BDC /* AFHTTPRequestOperation.h */,
+				278D6E36206B456000A68BDC /* AFHTTPRequestOperation.m */,
+				278D6E37206B456000A68BDC /* AFImageRequestOperation.h */,
+				278D6E38206B456000A68BDC /* AFImageRequestOperation.m */,
+				278D6E39206B456000A68BDC /* AFJSONRequestOperation.h */,
+				278D6E3A206B456000A68BDC /* AFJSONRequestOperation.m */,
+				278D6E3B206B456000A68BDC /* AFNetworkActivityIndicatorManager.h */,
+				278D6E3C206B456000A68BDC /* AFNetworkActivityIndicatorManager.m */,
+				278D6E3D206B456000A68BDC /* AFNetworking.h */,
+				278D6E3E206B456000A68BDC /* AFPropertyListRequestOperation.h */,
+				278D6E3F206B456000A68BDC /* AFPropertyListRequestOperation.m */,
+				278D6E40206B456000A68BDC /* AFURLConnectionOperation.h */,
+				278D6E41206B456000A68BDC /* AFURLConnectionOperation.m */,
+				278D6E42206B456000A68BDC /* AFXMLRequestOperation.h */,
+				278D6E43206B456000A68BDC /* AFXMLRequestOperation.m */,
+				278D6E44206B456000A68BDC /* UIImageView+AFNetworking.h */,
+				278D6E45206B456000A68BDC /* UIImageView+AFNetworking.m */,
+			);
+			path = AFNetworking;
 			sourceTree = "<group>";
 		};
 		2B3A5254778B815F2B88A8AC /* Frameworks */ = {
@@ -204,8 +296,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				278D6E2F206B41ED00A68BDC /* Done@2x.png in Resources */,
 				278D6DF7206AA2B100A68BDC /* LaunchScreen.storyboard in Resources */,
 				278D6E22206AAEC700A68BDC /* GoogleService-Info.plist in Resources */,
+				278D6E2E206B41ED00A68BDC /* Done.png in Resources */,
 				278D6DF4206AA2B100A68BDC /* Assets.xcassets in Resources */,
 				278D6DEF206AA2B100A68BDC /* Main.storyboard in Resources */,
 			);
@@ -275,6 +369,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -290,6 +385,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -307,21 +403,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				278D6E4C206B456000A68BDC /* AFURLConnectionOperation.m in Sources */,
 				278D6E0E206AA4A400A68BDC /* LoginViewController.swift in Sources */,
 				278D6DEC206AA2B100A68BDC /* ViewController.swift in Sources */,
 				278D6E0C206AA4A400A68BDC /* RoundButton.swift in Sources */,
 				278D6DF2206AA2B100A68BDC /* Workout_Freak.xcdatamodeld in Sources */,
 				278D6E0F206AA4A400A68BDC /* CustomTextField.swift in Sources */,
+				278D6E30206B41ED00A68BDC /* UIImageView+MHFacebookImageViewer.m in Sources */,
+				278D6E47206B456000A68BDC /* AFHTTPRequestOperation.m in Sources */,
+				278D6E24206B35F400A68BDC /* FeedDetailVC.swift in Sources */,
 				278D6E12206AA4A400A68BDC /* DataService.swift in Sources */,
+				278D6E4D206B456000A68BDC /* AFXMLRequestOperation.m in Sources */,
 				278D6E17206AA4A400A68BDC /* FeedViewController.swift in Sources */,
 				278D6E0D206AA4A400A68BDC /* CustomView.swift in Sources */,
 				278D6E13206AA4A400A68BDC /* HeaderView.swift in Sources */,
 				278D6E14206AA4A400A68BDC /* AddQuoteVC.swift in Sources */,
 				278D6E11206AA4A400A68BDC /* CircleView.swift in Sources */,
+				278D6E48206B456000A68BDC /* AFImageRequestOperation.m in Sources */,
 				278D6E10206AA4A400A68BDC /* Post.swift in Sources */,
 				278D6E15206AA4A400A68BDC /* Constants.swift in Sources */,
+				278D6E4E206B456000A68BDC /* UIImageView+AFNetworking.m in Sources */,
+				278D6E46206B456000A68BDC /* AFHTTPClient.m in Sources */,
+				278D6E49206B456000A68BDC /* AFJSONRequestOperation.m in Sources */,
+				278D6E2D206B41ED00A68BDC /* MHFacebookImageViewer.m in Sources */,
+				278D6E4A206B456000A68BDC /* AFNetworkActivityIndicatorManager.m in Sources */,
 				278D6DEA206AA2B100A68BDC /* AppDelegate.swift in Sources */,
 				278D6E0B206AA4A400A68BDC /* PostCell.swift in Sources */,
+				278D6E4B206B456000A68BDC /* AFPropertyListRequestOperation.m in Sources */,
 				278D6E16206AA4A400A68BDC /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +580,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "b85bdaba-4d10-49e5-831e-1c4d627d02cb";
 				PROVISIONING_PROFILE_SPECIFIER = ios_developement;
+				SWIFT_OBJC_BRIDGING_HEADER = Workout_Freak_Bridging_Header.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -494,6 +603,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "b85bdaba-4d10-49e5-831e-1c4d627d02cb";
 				PROVISIONING_PROFILE_SPECIFIER = ios_developement;
+				SWIFT_OBJC_BRIDGING_HEADER = Workout_Freak_Bridging_Header.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

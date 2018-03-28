@@ -1,9 +1,9 @@
 //
 //  FeedViewController.swift
-//  itjapan-social
+//  Workout Freak
 //
-//  Created by Matthias Hofmann on 28.09.16.
-//  Copyright © 2016 MatthiasHofmann. All rights reserved.
+//  Created by Al Amin on 28.03.18.
+//  Copyright © 2018 Amin. All rights reserved.
 //
 
 import UIKit
@@ -21,6 +21,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // MARK: Variables
     
+    var selectedCell = 0
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
@@ -117,6 +118,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
             
+            let tap = UITapGestureRecognizer(target: self, action: #selector(self.btnCellClicked(_:)))
+            
+            cell.addGestureRecognizer(tap)
+            self.selectedCell = indexPath.row
+            
             if let image = FeedViewController.imageCache.object(forKey: post.imageUrl as NSString) {
                 cell.configureCell(post: post, image: image)
             } else {
@@ -124,7 +130,21 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
             return cell
         } else {
+            self.selectedCell = indexPath.row
             return PostCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.performSegue(withIdentifier: "FeedDetail", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "FeedDetail" {
+            let destination = segue.destination as! FeedDetailVC
+            destination.post = posts[selectedCell]
+            print(destination)
         }
     }
     
@@ -141,6 +161,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     // MARK: IBActions
+    
+    @IBAction func btnCellClicked(_ sender: AnyObject) {
+        
+        self.performSegue(withIdentifier: "FeedDetail", sender: self)
+    }
     
     @IBAction func signOutButtonPressed(_ sender: UIButton) {
         let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)

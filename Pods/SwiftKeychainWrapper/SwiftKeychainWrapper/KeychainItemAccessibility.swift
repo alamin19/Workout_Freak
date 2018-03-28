@@ -3,7 +3,7 @@
 //  SwiftKeychainWrapper
 //
 //  Created by James Blair on 4/24/16.
-//  Copyright © 2016 Jason Rendel. All rights reserved.
+//  Copyright © 2018 Jason Rendel. All rights reserved.
 //
 //    The MIT License (MIT)
 //

@@ -1,9 +1,9 @@
 //
 //  LoginViewController.swift
-//  itjapan-social
+//  Workout Freak
 //
-//  Created by Matthias Hofmann on 27.09.16.
-//  Copyright © 2016 MatthiasHofmann. All rights reserved.
+//  Created by Al Amin on 27.09.16.
+//  Copyright © 2018 Amin. All rights reserved.
 //
 
 import UIKit
