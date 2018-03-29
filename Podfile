@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+# platform :ios, '7.0'
 
 target 'Workout Freak' do
     # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -10,6 +10,7 @@ target 'Workout Freak' do
     pod 'Firebase/Database'
     pod 'Firebase/Auth'
     pod 'Firebase/Storage'
+    pod 'Google-Mobile-Ads-SDK'
     pod 'SwiftKeychainWrapper'
     pod 'SVProgressHUD'
     pod ‘IQKeyboardManagerSwift’

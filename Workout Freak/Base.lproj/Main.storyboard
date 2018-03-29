@@ -252,7 +252,7 @@
             </objects>
             <point key="canvasLocation" x="2911" y="340"/>
         </scene>
-        <!--Daily Workout-->
+        <!--Delegate-->
         <scene sceneID="qxe-sF-dv1">
             <objects>
                 <viewController id="yH8-zE-Ot0" customClass="FeedViewController" customModule="Workout_Freak" customModuleProvider="target" sceneMemberID="viewController">
@@ -261,7 +261,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="344" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YoL-jk-2yF">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="553"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="344" id="X8Q-mm-FBP" customClass="PostCell" customModule="Workout_Freak" customModuleProvider="target">
@@ -323,12 +323,25 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WM4-NK-CXl" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="553" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BCP-jK-rBv"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="yH8-zE-Ot0" id="Jwa-fb-zKk"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YoL-jk-2yF" firstAttribute="top" secondItem="93n-IS-1ul" secondAttribute="top" id="J5k-wp-P6D"/>
-                            <constraint firstItem="Cxw-Tl-pqe" firstAttribute="bottom" secondItem="YoL-jk-2yF" secondAttribute="bottom" id="f2D-bw-ixW"/>
+                            <constraint firstAttribute="trailing" secondItem="WM4-NK-CXl" secondAttribute="trailing" id="XgI-zq-ZjI"/>
+                            <constraint firstItem="WM4-NK-CXl" firstAttribute="bottom" secondItem="Cxw-Tl-pqe" secondAttribute="bottom" id="cjW-bc-CiF"/>
+                            <constraint firstItem="WM4-NK-CXl" firstAttribute="top" secondItem="YoL-jk-2yF" secondAttribute="bottom" id="d1o-JU-nAX"/>
                             <constraint firstItem="Cxw-Tl-pqe" firstAttribute="trailing" secondItem="YoL-jk-2yF" secondAttribute="trailing" id="mpz-hE-9ua"/>
+                            <constraint firstItem="WM4-NK-CXl" firstAttribute="leading" secondItem="Cxw-Tl-pqe" secondAttribute="leading" id="nle-yt-RZ4"/>
                             <constraint firstItem="YoL-jk-2yF" firstAttribute="leading" secondItem="Cxw-Tl-pqe" secondAttribute="leading" id="vPH-rg-Grr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Cxw-Tl-pqe"/>
@@ -341,6 +354,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bannerView" destination="WM4-NK-CXl" id="u1x-fA-G23"/>
                         <outlet property="tableView" destination="YoL-jk-2yF" id="s1p-AM-Z0k"/>
                         <segue destination="Gs8-e1-VXZ" kind="show" identifier="login" id="hWa-pd-a9J"/>
                         <segue destination="eJx-sQ-Wat" kind="show" identifier="FeedDetail" id="HvH-AW-dBb"/>
@@ -348,9 +362,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVn-Qo-rkQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1420" y="1440"/>
+            <point key="canvasLocation" x="1420" y="1439.7301349325339"/>
         </scene>
-        <!--Workout Quote-->
+        <!--Delegate-->
         <scene sceneID="Gqz-of-uxg">
             <objects>
                 <viewController id="eJx-sQ-Wat" customClass="FeedDetailVC" customModule="Workout_Freak" customModuleProvider="target" sceneMemberID="viewController">
@@ -365,22 +379,35 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pt5-Bj-ei8">
-                                <rect key="frame" x="8" y="595" width="359" height="0.0"/>
+                                <rect key="frame" x="8" y="15" width="359" height="0.0"/>
                                 <color key="backgroundColor" red="0.79607843140000001" green="0.12941176469999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hTm-Hi-V8e" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="553" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="waz-hz-Ajf"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="eJx-sQ-Wat" id="3j6-50-Gkd"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="pt5-Bj-ei8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="KuI-Rd-MSZ" secondAttribute="bottom" constant="8" id="R9D-Ay-r7Q"/>
-                            <constraint firstAttribute="bottom" secondItem="pt5-Bj-ei8" secondAttribute="bottom" constant="8" id="TYQ-eB-dQx"/>
+                            <constraint firstAttribute="trailing" secondItem="pt5-Bj-ei8" secondAttribute="trailing" constant="8" id="GTP-XW-Tbl"/>
                             <constraint firstItem="KuI-Rd-MSZ" firstAttribute="centerY" secondItem="oxg-XC-cn1" secondAttribute="centerY" id="afe-Vx-IX8"/>
-                            <constraint firstItem="pt5-Bj-ei8" firstAttribute="leading" secondItem="nNE-8t-EbV" secondAttribute="leading" constant="8" id="bgz-2A-356"/>
-                            <constraint firstItem="pt5-Bj-ei8" firstAttribute="centerX" secondItem="nNE-8t-EbV" secondAttribute="centerX" id="cTu-9S-Slb"/>
+                            <constraint firstItem="KuI-Rd-MSZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="pt5-Bj-ei8" secondAttribute="bottom" constant="15" id="ayK-R2-AUu"/>
+                            <constraint firstItem="hTm-Hi-V8e" firstAttribute="leading" secondItem="nNE-8t-EbV" secondAttribute="leading" id="edg-d3-lbw"/>
                             <constraint firstItem="KuI-Rd-MSZ" firstAttribute="leading" secondItem="nNE-8t-EbV" secondAttribute="leading" constant="10" id="fW1-78-H56"/>
+                            <constraint firstItem="nNE-8t-EbV" firstAttribute="trailing" secondItem="hTm-Hi-V8e" secondAttribute="trailing" id="jNZ-nW-RYG"/>
                             <constraint firstItem="KuI-Rd-MSZ" firstAttribute="centerX" secondItem="nNE-8t-EbV" secondAttribute="centerX" id="o8z-W7-CzW"/>
+                            <constraint firstItem="pt5-Bj-ei8" firstAttribute="leading" secondItem="oxg-XC-cn1" secondAttribute="leading" constant="8" id="rN2-yB-RwC"/>
+                            <constraint firstAttribute="bottom" secondItem="hTm-Hi-V8e" secondAttribute="bottom" id="toW-0Q-7mq"/>
+                            <constraint firstItem="pt5-Bj-ei8" firstAttribute="top" secondItem="nNE-8t-EbV" secondAttribute="top" constant="15" id="wYm-Bo-eWF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nNE-8t-EbV"/>
                     </view>
@@ -399,6 +426,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="bannerView" destination="hTm-Hi-V8e" id="jMh-P1-kJN"/>
                         <outlet property="imgView" destination="KuI-Rd-MSZ" id="LRg-Yz-B9v"/>
                         <outlet property="lblQuoteText" destination="pt5-Bj-ei8" id="Cp0-gm-D23"/>
                     </connections>

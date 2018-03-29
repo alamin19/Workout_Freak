@@ -41,6 +41,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             self.send10SecsNotification()
         }
         
+        // Initialize the Google Mobile Ads SDK.
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-5854090999342595~9098149415")
+        
         return true
     }
     
