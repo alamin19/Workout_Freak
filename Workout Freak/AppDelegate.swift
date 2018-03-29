@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Workout Freak
 //
-//  Created by Saddam Al Amin on 3/27/18.
+//  Created by  Al Amin on 3/27/18.
 //  Copyright © 2018 Al Amin. All rights reserved.
 //
 

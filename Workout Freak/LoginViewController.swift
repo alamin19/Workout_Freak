@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import FBSDKCoreKit
-import FBSDKLoginKit
 import Firebase
 import SwiftKeychainWrapper
 import SVProgressHUD
@@ -40,19 +38,7 @@ class LoginViewController: UIViewController {
     // facebook authentification
     @IBAction func facebookButtonPressed(_ sender: AnyObject) {
         // create loginmanager
-        let facebookLogin = FBSDKLoginManager()
-        // request email
-        facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
-            if error != nil {
-                print("DEV: Unable to authenticate with Facebook - \(error)")
-            } else if result?.isCancelled == true {
-                print("DEV: User cancelled Facebook authentication")
-            } else {
-                print("DEV: Successfully authenticated with Facebook")
-                let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-                self.firebaseAuth(credential)
-            }
-        }
+        
     }
     
     // email authentication
