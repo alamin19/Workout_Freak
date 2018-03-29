@@ -11,12 +11,12 @@ import Firebase
 
 class PostCell: UITableViewCell {
 
-    @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var usernameLabel: UILabel!
+//    @IBOutlet weak var profileImage: UIImageView!
+//    @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var postImage: UIImageView!
     @IBOutlet weak var caption: UITextView!
-    @IBOutlet weak var likesLabel: UILabel!
-    @IBOutlet weak var likeImage: UIImageView!
+//    @IBOutlet weak var likesLabel: UILabel!
+//    @IBOutlet weak var likeImage: UIImageView!
     
     
     var post: Post!
@@ -25,7 +25,7 @@ class PostCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
+/*
         // add tapGestureRecognizers for the like button programmatically
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(likeButtonPressed))
         singleTap.numberOfTouchesRequired = 1
@@ -39,7 +39,7 @@ class PostCell: UITableViewCell {
         singleTap.require(toFail: doubleTap)
         
         likeImage.isUserInteractionEnabled = true
-
+*/
         
     }
 
@@ -48,7 +48,7 @@ class PostCell: UITableViewCell {
         likesRef = DataService.ds.REF_USER_CURRENT.child("likes").child(post.postId)
         
         self.caption.text = post.caption
-        self.likesLabel.text = "\(post.likes)"
+//        self.likesLabel.text = "\(post.likes)"
         // TODO profileImage and usernameLabel
         
         // if there is an image in the cache, use that image.
@@ -75,9 +75,9 @@ class PostCell: UITableViewCell {
         // likes
         likesRef.observeSingleEvent(of: .value, with: { (snapshot) in
             if let _ = snapshot.value as? NSNull {
-                self.likeImage.image = UIImage(named: "empty-heart")
+//                self.likeImage.image = UIImage(named: "empty-heart")
             } else {
-                self.likeImage.image = UIImage(named: "filled-heart")
+//                self.likeImage.image = UIImage(named: "filled-heart")
             }
 
         })
@@ -87,11 +87,11 @@ class PostCell: UITableViewCell {
         // likes
         likesRef.observeSingleEvent(of: .value, with: { (snapshot) in
             if let _ = snapshot.value as? NSNull {
-                self.likeImage.image = UIImage(named: "filled-heart")
+//                self.likeImage.image = UIImage(named: "filled-heart")
                 self.post.adjustLikes(addLike: true)
                 self.likesRef.setValue(true)
             } else {
-                self.likeImage.image = UIImage(named: "empty-heart")
+//                self.likeImage.image = UIImage(named: "empty-heart")
                 self.post.adjustLikes(addLike: false)
                 self.likesRef.removeValue()
             }

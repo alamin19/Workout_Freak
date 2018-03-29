@@ -137,6 +137,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             let destination = segue.destination as! FeedDetailVC
             destination.post = posts[selectedCell]
             print(destination)
+        } else {
+            
+            let destination = segue.destination as! LoginViewController
+            print(destination)
         }
     }
     
@@ -160,11 +164,18 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func signOutButtonPressed(_ sender: UIButton) {
+        
         let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         print("DEV: Id removed from keychain - \(keychainResult)")
         try! Auth.auth().signOut()
-        self.dismiss(animated: true, completion: nil)
-        performSegue(withIdentifier: "login", sender: sender)
+        
+        if let vc = self.navigationController?.viewControllerWithClass(LoginViewController.self) {
+            self.navigationController?.popToViewController(vc, animated: true)
+        } else {
+            self.performSegue(withIdentifier: "login", sender: sender)
+        }
+        
+        
     }
     
     @IBAction func addImagePressed(_ sender: AnyObject) {
@@ -231,4 +242,20 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.reloadData()
     }
 
+}
+
+extension UINavigationController {
+    
+    func viewControllerWithClass(_ aClass: AnyClass) -> UIViewController? {
+        
+        for vc in self.viewControllers {
+            
+            if vc.isMember(of: aClass) {
+                
+                return vc
+            }
+        }
+        
+        return nil
+    }
 }

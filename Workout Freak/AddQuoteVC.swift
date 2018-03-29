@@ -12,7 +12,7 @@ import SwiftKeychainWrapper
 import SVProgressHUD
 
 class AddQuoteVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    @IBOutlet weak var addImage: CircleView!
+    @IBOutlet weak var addImage: UIImageView!
     @IBOutlet weak var captionField: UITextView!
     
     // MARK: Variables
@@ -44,7 +44,7 @@ class AddQuoteVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     
     // MARK: IBActions
     
-    @IBAction func signOutButtonPressed(_ sender: UIButton) {
+    @IBAction func signOutButtonPressed(_ sender: AnyObject) {
         performSegue(withIdentifier: "shwoPosts", sender: sender)
 //        let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
 //        print("DEV: Id removed from keychain - \(keychainResult)")

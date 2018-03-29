@@ -12,22 +12,73 @@ import Fabric
 import Crashlytics
 import Firebase
 import IQKeyboardManagerSwift
+import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
-
+    var timeToRemember: Double = 10
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        sleep(2)
+        
         Fabric.with([Crashlytics.self])
         
         // Firebase
         FirebaseApp.configure()
         
         IQKeyboardManager.sharedManager().enable = true
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {(accepted, error) in
+            if !accepted {
+                print("Permiso denegado por el usuario")
+            }
+            
+            UNUserNotificationCenter.current().delegate = self
+            self.send10SecsNotification()
+        }
+        
         return true
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        completionHandler([.alert, .sound])
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        send10SecsNotification()
+    }
+    
+    func send10SecsNotification() {
+        
+        var dateInfo = DateComponents()
+        dateInfo.hour = 6
+        dateInfo.minute = 0
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateInfo, repeats: true)
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Workout Freak"
+        content.subtitle = "Good Morning! ☀️"
+        content.body = "Hey, it's time to hit the gym."
+        content.sound = UNNotificationSound.default()
+        
+        let category = UNNotificationCategory(identifier: "WorkoutFreak", actions: [], intentIdentifiers: [], options: [])
+        UNUserNotificationCenter.current().setNotificationCategories([category])
+        
+        let request = UNNotificationRequest(identifier: "WorkoutNotification", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        UNUserNotificationCenter.current().add(request) {(error) in
+            if let error = error {
+                print("error: \(error)")
+            }
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
